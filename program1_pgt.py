@@ -1,8 +1,7 @@
 #!usr/bin/env python3
 # Cybersecurity Essentials
 # Group Project - Password Guessing Tool
-# Members: Tamika Burgess-Rose (A01075997)
-#          Nimmy James
+# Student: Tamika Burgess-Rose (A01075997)
 # -------------------------------------------
 # Accept User Input
 # Encrypt Input
