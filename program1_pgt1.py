@@ -3,20 +3,18 @@
 # Group Project - Password Guessing Tool
 # Student: Tamika Burgess-Rose (A01075997)
 # -------------------------------------------
-# Detect Username
-# Accept User Password Input
-# Encrypt Input using CRYPT library
+# Accept User Input
+# Encrypt Input
 # Compare against /etc/shadow
 # Validate if Input exist in /etc/shadow
 
 from colorama import Fore as Colors
 from crypt import crypt
-from os import getuid, getlogin
+from os import getuid
 from spwd import getspnam
 from sys import argv
 
 def main():
-	username = ""
 	new_password = ""
 	encrypted_password = ""
 
@@ -25,8 +23,9 @@ def main():
 		exit(1)
 
 	if len(argv) <= 1:
+		username = input("Enter Username: ").lower()
 		try:
-			username = getspnam(getlogin())[0]
+			username = getspnam(username)[0]
 		except:
 			print(f"{username} not found")
 			exit(1)
@@ -61,12 +60,11 @@ def main():
 			print(Colors.RED + "Password NOT found!")
 
 		print(
-			Colors.LIGHTYELLOW_EX + "Either Password entered did not match user or User entered did not match password. \n You're welcome to try again\n")
+			Colors.LIGHTYELLOW_EX + "Either Password entered did not match user or User entered did not match password. "
+									"\n You're welcome to try again\n")
 
 	exit(1)
 
 if __name__ == '__main__':
 	main()
-
-
 
