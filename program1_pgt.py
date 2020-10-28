@@ -10,7 +10,7 @@
 
 from colorama import Fore as Colors
 from crypt import crypt
-from os import getuid
+from os import getuid, getlogin
 from spwd import getspall, getspnam
 from sys import argv
 
@@ -20,8 +20,8 @@ if getuid() != 0:
 	exit(1)
 
 if len(argv) <= 1:
-	username = input("What user should we try to guess the password for? ")
 	try:
+		username = getlogin()
 		user = getspnam(username)[0]
 	except:
 		print(f"{username} not found")
@@ -35,9 +35,12 @@ guess_password = input("Can you guess the password? ")
 try:
 	encrypted_password = getspnam(username)[1]
 
-	guess_password = guess_password.rstrip()
+	if encrypted_password == '*' or encrypted_password == '!':
+		print('No password detected')
+	else:
+		guess_password = guess_password.rstrip()
 
-	new_password = crypt(guess_password, encrypted_password)
+		new_password = crypt(guess_password, encrypted_password)
 
 except:
 	print(f"{username} not found")
