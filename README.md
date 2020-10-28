@@ -16,16 +16,18 @@
 <p>
     Use <b>crypt.crypt(word, salt)</b> to perform this validation.
 </p>
-<p>
-    <b>N.B.</b> I had 2 different perspective on how to approach this one. So I created 2 programs to explore both options:    
-</p>
-<p>
-    program1_pgt.py adheres to Lecturer's requirement, where the program should detect user logged in and accept Guess attempt and return result.
-</p>
-<p>
-    program1_pgt1.py allows user to enter a username that may have logged into the current machine recently and accept a guess password.
-</p>
-
+<hr>
+<em>
+    <p>
+        <b>N.B.</b> I had 2 different perspectives on how to approach this script. So I created 2 programs to explore both options:    
+    </p>
+    <p>
+        program1_pgt.py adheres to Lecturer's requirement, where the program should detect the identity (username) of the user logged in and accept a guess attempt and return a result.
+    </p>
+    <p>
+        program1_pgt1.py allows user to enter a username that may have logged into the current machine recently and accept a guess password.
+    </p>
+</em>
 ### Program 2: One-Time Password Generator
 <p>
     Implement a One-Time Password generator using the following algorithm.  
@@ -59,5 +61,5 @@
     With God's guidance and determination to succeed, I completed the challenge on time.
 </p>  
 <p>
-    My curiousity begun to grow as I learn more about coding with Python and I begun exploring other options for achieving the same request.
+    My curiosity begun to grow as I learn more about coding with Python and I begun exploring other options for achieving the same request.
 </p>   
