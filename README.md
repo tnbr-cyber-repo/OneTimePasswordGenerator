@@ -27,7 +27,9 @@
     <p>
         program1_pgt1.py allows user to enter a username that may have logged into the current machine recently and accept a guess password.
     </p>
-</em>
+</em>  
+<hr>  
+
 ### Program 2: One-Time Password Generator
 <p>
     Implement a One-Time Password generator using the following algorithm.  
